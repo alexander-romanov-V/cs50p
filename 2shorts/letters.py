@@ -7,7 +7,7 @@ def main():
     # for sender in ["Mario", "Luigi", "Daisy", "Yoshi"]:
     #     print(write_letter(sender, "Princess Peach"))
 
-    persons = ["Mario", "Luigi", "Daisy", "Yoshi"]
+    persons = ["Mario", "Luigi", "Daisy", "Yoshi", "Bowser"]
     # for i in range(len(persons)):
     #     print(write_letter(persons[i], "Princess Peach"))
     for person in persons:
