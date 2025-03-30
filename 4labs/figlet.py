@@ -4,6 +4,7 @@ import sys
 import random
 import pyfiglet
 
+# pip install pyfiglet
 
 def main():
     """Main code"""
