@@ -1,24 +1,20 @@
 """Little Professor toy"""
 
 from random import randint
+import sys
 
 
 def main():
     """Main code"""
-    while True:
-        try:
-            level = get_level()
-            break
-        except ValueError:
-            pass
-
+    level = get_level()
     score = 0
+
     for _ in range(10):
         try:
             x = generate_integer(level)
             y = generate_integer(level)
         except ValueError:
-            exit()
+            sys.exit()
 
         errors = 0
         while errors < 3:
@@ -40,10 +36,14 @@ def main():
 
 def get_level():
     """Function get level from 1 to 3."""
-    n = int(input("Level: "))
-    if not 1 <= n <= 3:
-        raise ValueError
-    return n
+    level = 0
+    while not 1 <= level <= 3:
+        try:
+            level = int(input("Level: "))
+        except ValueError:
+            pass
+
+    return level
 
 
 def generate_integer(level):
