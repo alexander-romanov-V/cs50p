@@ -1,10 +1,11 @@
-"""Work with system, random and figlet"""
+"""Write a text using figlet"""
 
 import sys
 import random
 import pyfiglet
 
 # pip install pyfiglet
+
 
 def main():
     """Main code"""
