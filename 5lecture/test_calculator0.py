@@ -11,7 +11,7 @@ def main():
 def test_square():
     """Test square() function"""
 
-    # 2. Improved approach
+    # 2. Anothe basic approach
     try:
         assert square(2) == 4
     except AssertionError:
