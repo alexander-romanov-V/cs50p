@@ -9,7 +9,7 @@ def main():
 
 def square(n):
     """Returns n^2"""
-    return n + n
+    return n * n
 
 
 if __name__ == "__main__":

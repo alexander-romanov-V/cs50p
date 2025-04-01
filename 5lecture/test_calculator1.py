@@ -4,6 +4,7 @@ from calculator import square
 
 # pip install pytest
 # run test: pytest test_calculator.py
+# tests will be stopped on FIRST assert 
 
 def test_square():
     """Unit test square() function"""
