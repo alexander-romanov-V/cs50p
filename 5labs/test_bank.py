@@ -20,7 +20,7 @@ def test_value_100():
     """Test bad greetings"""
     assert value("What's up") == 100
     assert value("Welcome, sir") == 100
-    assert value("Godd day, sir") == 100
+    assert value("Good day, sir") == 100
 
 
 def test_value_empty():
