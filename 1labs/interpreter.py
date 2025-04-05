@@ -21,4 +21,5 @@ def main():
 
     print(f"{res:.1f}")
 
+
 main()

@@ -8,4 +8,5 @@ def main():
     else:
         print("$100")
 
+
 main()

@@ -16,4 +16,5 @@ def main():
     else:
         print("application/octet-stream")
 
+
 main()
