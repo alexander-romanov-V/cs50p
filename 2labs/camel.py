@@ -11,6 +11,4 @@ def main():
     print(f"snake_case: {snake_var}")
 
 
-
-
 main()

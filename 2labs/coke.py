@@ -12,5 +12,4 @@ def main():
     print(f"Change Owed: {inserted - price}")
 
 
-
 main()

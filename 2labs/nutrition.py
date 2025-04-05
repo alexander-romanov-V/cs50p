@@ -21,6 +21,7 @@ nutritions = {
     "Watermelon": 80,
 }
 
+
 def main():
     item = input("Item: ").title()
     if item in nutritions.keys():
