@@ -3,7 +3,7 @@ def main():
     while True:
         date = input("Date: ").strip().capitalize()
         try:
-            m, d, y = convert_date(date)
+            d, m, y = convert_date(date)
             break
         except ValueError:
             pass
@@ -28,6 +28,7 @@ months = [
 
 
 def convert_date(date):
+    """Converts date MM/DD/YYYY and DD Month, YYYY into separate day, month, year"""
     date = date.replace(", ", "/").replace(" ", "/").replace(",", "/")
     m, d, y = date.split("/")
     if m in months:
@@ -38,7 +39,7 @@ def convert_date(date):
     y = int(y)
     if not (1 <= d <= 31 and 1 <= m <= 12):
         raise ValueError
-    return m, d, y
+    return d, m, y
 
 
 if __name__ == "__main__":

@@ -17,6 +17,7 @@ def main():
 
 
 def convert(x, y):
+    """Convert fraction to decimal"""
     x = int(x)
     y = int(y)
     if x > y or y == 0:
