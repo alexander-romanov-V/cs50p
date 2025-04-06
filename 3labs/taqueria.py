@@ -12,6 +12,7 @@ menu = {
 
 
 def main():
+    """Main code"""
     total = 0.0
     while True:
         try:

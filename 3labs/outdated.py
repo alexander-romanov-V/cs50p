@@ -15,6 +15,7 @@ months = [
 
 
 def main():
+    """Main code"""
     while True:
         date = input("Date: ").strip().capitalize()
         date = date.replace(", ", "/").replace(" ", "/").replace(",", "/")

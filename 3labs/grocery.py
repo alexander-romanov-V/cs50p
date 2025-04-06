@@ -1,4 +1,5 @@
 def main():
+    """Main code"""
     grocery_list = {}
     while True:
         try:

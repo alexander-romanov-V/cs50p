@@ -1,4 +1,5 @@
 def main():
+    """Main code"""
     while True:
         date = input("Date: ").strip().capitalize()
         try:

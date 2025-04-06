@@ -1,4 +1,5 @@
 def main():
+    """Main code"""
     while True:
         try:
             x, y = input("Fraction: ").split("/")
