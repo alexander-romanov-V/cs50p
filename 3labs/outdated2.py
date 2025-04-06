@@ -22,14 +22,12 @@ months = [
     "September",
     "October",
     "November",
-    "December"
+    "December",
 ]
 
+
 def convert_date(date):
-    date = date\
-        .replace(", ", "/")\
-        .replace(" ", "/")\
-        .replace(",", "/")
+    date = date.replace(", ", "/").replace(" ", "/").replace(",", "/")
     m, d, y = date.split("/")
     if m in months:
         m = months.index(m) + 1

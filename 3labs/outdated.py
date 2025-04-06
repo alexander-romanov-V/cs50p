@@ -10,7 +10,7 @@ months = [
     "September",
     "October",
     "November",
-    "December"
+    "December",
 ]
 
 
@@ -33,7 +33,6 @@ def main():
                 break
 
     print(f"{y:04}-{m:02}-{d:02}")
-
 
 
 if __name__ == "__main__":
