@@ -24,6 +24,9 @@ def check_arguments(argv):
     out_f_name = argv[2]
     if not (in_f_name.endswith(".csv") and out_f_name.endswith(".csv")):
         sys.exit("Not a CSV file")
+    if in_f_name == out_f_name:
+        sys.exit("Input and output files must be different files")
+
     return in_f_name, out_f_name
 
 
