@@ -7,7 +7,6 @@ import csv
 def main():
     """Main code"""
     in_f_name, out_f_name = check_arguments(sys.argv)
-    # in_f_name, out_f_name =  "6labs/before.csv", "6labs/after.csv"
     try:
         convert(in_f_name, out_f_name)
     except FileNotFoundError:
