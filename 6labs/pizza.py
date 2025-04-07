@@ -40,10 +40,11 @@ def get_table(file_name):
         reader = csv.DictReader(file)
         headers = reader.fieldnames
         for line in reader:
-            row = []
-            for h in headers:  # type: ignore
-                row.append(line[h])
-            table.append(row)
+            table.append(line.values())
+            # row = []
+            # for h in headers:  # type: ignore
+            #     row.append(line[h])
+            # table.append(row)
     return headers, table
 
 
