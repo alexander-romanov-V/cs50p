@@ -25,9 +25,9 @@ def check_arguments(argv):
     if argc > 3:
         sys.exit("Too many command-line argumens")
     ext = ["", ""]
-    for i in range(1, 3):
-        ext[i - 1] = os.path.splitext(argv[i])[1].lower()
-        if ext[i - 1] not in extentions:
+    for i in range(2):
+        ext[i] = os.path.splitext(argv[i + 1])[1].lower()
+        if ext[i] not in extentions:
             sys.exit("Invalid Input")
     if ext[0] != ext[1]:
         sys.exit("Input and output have different extensions")

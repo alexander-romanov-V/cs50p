@@ -22,7 +22,7 @@ def check_arguments(argv):
         sys.exit("Too many command-line argumens")
     in_f_name = argv[1]
     out_f_name = argv[2]
-    if not (in_f_name.endswith(".csv") and out_f_name.endswith(".csv")):
+    if not (in_f_name.lower().endswith(".csv") and out_f_name.lower().endswith(".csv")):
         sys.exit("Not a CSV file")
     if in_f_name == out_f_name:
         sys.exit("Input and output files must be different files")
@@ -41,9 +41,6 @@ def convert(in_f_name, out_f_name):
             row["first"], row["last"] = row["name"].split(",")
             row.pop("name")
             writer.writerow(row)
-            # first, last = row["name"].split(",")
-            # new_row = {"first": first, "last": last, "house": row["house"]}
-            # writer.writerow(new_row)
 
 
 if __name__ == "__main__":
