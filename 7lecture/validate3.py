@@ -13,7 +13,9 @@ import re
 # []      set of characters (match any of this characters))
 # [^]     complementing the set (NOT match any of this characters)
 # [a-z]   range of characters (from a till z)
-# (ab|cd) any group of characters (ab or cd)
+# A|B     either A or B     \ can combine (ABC|DEF)
+# (...)   a group           / either group ABC or group DEF
+# (?:...) non-capturing version
 # \d      decimal digit               == [0-9]
 # \D      not decimal digit           == [^0-9]
 # \s      whitespace characters       == [ \t]
@@ -33,7 +35,8 @@ email = input("What's your email? ").strip()
 # if re.search(r"^[^@]+@[^@]+\.edu$", email):
 # if re.search(r"^[a-zA-Z0-9_]+@[a-zA-Z0-9_]+\.edu$", email):
 # if re.search(r"^\w+@\w+\.edu$", email):
-if re.search(r"^\w+@\w+\.edu$", email, flags=re.IGNORECASE):
+# if re.search(r"^\w+@\w+\.edu$", email, flags=re.IGNORECASE):
+if   re.search(r"^(\w/\.)+@(\w+\.)+edu$", email, flags=re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
