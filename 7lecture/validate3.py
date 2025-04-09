@@ -16,6 +16,7 @@ import re
 # A|B     either A or B     \ can combine (ABC|DEF)
 # (...)   a group           / either group ABC or group DEF
 # (?:...) non-capturing version
+# (?<group_name>...) named capture group -> match.group("group_name")
 # \d      decimal digit               == [0-9]
 # \D      not decimal digit           == [^0-9]
 # \s      whitespace characters       == [ \t]
