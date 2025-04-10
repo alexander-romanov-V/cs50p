@@ -10,9 +10,8 @@ def main():
 
 def parse(s):
     """Exctract youtube links and returns its short version"""
-    pattern = (
-        r"<iframe.*src=\"https?://(?:www\.)?youtube\.com/embed/([\d\w]*)\".*></iframe>"
-    )
+    pattern = r"<iframe.*src=\"https?://(?:www\.)?youtube\.com/embed/([\d\w]*)\".*></iframe>"
+
     if match := re.search(pattern, s):
         return "https://youtu.be/" + match.group(1)
     return None
