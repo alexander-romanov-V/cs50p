@@ -1,4 +1,4 @@
-"""Exctract youtube links and returns its short version"""
+"""Exctract youtube links and returns its short version with RegEx"""
 
 import re
 
