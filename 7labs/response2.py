@@ -2,9 +2,7 @@
 
 import validators
 
-# pip install validator-collection
-# or
-# pip install validators            [this code]
+# pip install validators
 
 
 def main():
