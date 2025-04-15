@@ -1,5 +1,6 @@
 """OOP Example"""
 
+
 def main():
     """Main code"""
     name = get_name()
