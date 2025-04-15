@@ -6,11 +6,11 @@ class Student:
 
     # instance method __init__ (like a constructor)
     def __init__(self, name, house):
-        if not name:        # name == ""
+        if not name:  # name == ""
             raise ValueError("Missing name")
         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
             raise ValueError("Invalid house")
-        self.name = name    # Create new variables inside
+        self.name = name  # Create new variables inside
         self.house = house  # just created empty object.
 
 

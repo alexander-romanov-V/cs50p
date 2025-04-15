@@ -1,4 +1,5 @@
 """OOP Example 9 - properties, decorators"""
+
 # decorator - a func what modify behaviour of another func
 
 # int, str, list ... are classes
@@ -6,12 +7,13 @@
 # class str(object='')
 # class list([iterable])
 
+
 class Student:
     """Student class"""
 
     # instance method __init__ (like a constructor)
     def __init__(self, name, house):
-        self.name = name    # call setter (with error checking)
+        self.name = name  # call setter (with error checking)
         self.house = house  # call setter (with error checking)
 
     # __str__ default func to get string of this object (to print it 4 example)
@@ -34,7 +36,9 @@ class Student:
     @property
     def house(self):
         """Getter for house"""
-        return self._house  # conventionally use underscor for variable name (not to collide with func name)
+        return (
+            self._house
+        )  # conventionally use underscor for variable name (not to collide with func name)
 
     # Setter
     @house.setter
@@ -48,8 +52,8 @@ class Student:
 def main():
     """Main code"""
     student = get_student()
-    student._house = "Number Four, Privet Drive"     # still can access to internal var - please do NOT touch it :)
-    print(student)          # automatic call __str__ func of Student object
+    student._house = "Number Four, Privet Drive"  # still can access to internal var - please do NOT touch it :)
+    print(student)  # automatic call __str__ func of Student object
 
 
 def get_student():
