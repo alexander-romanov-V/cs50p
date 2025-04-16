@@ -1,10 +1,10 @@
-"""shorts 8 - Packages class"""
+"""shorts 8 - Packages class: incapsulate info into a class"""
 
 
 class Package:
     """Represent a package class"""
 
-    # Thunder init ?
+    # dunder init
     def __init__(self, number, sender, recipient, weight) -> None:
         self.number = number
         self.sender = sender
