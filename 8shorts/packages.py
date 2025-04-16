@@ -1,4 +1,4 @@
-"""shorts 8 - Packages"""
+"""shorts 8 - Packages class"""
 
 
 class Package:
