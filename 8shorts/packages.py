@@ -4,6 +4,7 @@
 class Package:
     """Represent a package class"""
 
+    # Thunder init ?
     def __init__(self, number, sender, recipient, weight) -> None:
         self.number = number
         self.sender = sender
@@ -13,7 +14,10 @@ class Package:
 
 def main():
     """Main code"""
-    packages = ["Package1: Alice to Bob, 10kg", "Package 2: Bob to Charlie, 5kg"]
+    packages = [
+        Package(number=1, sender="Alice", recipient="Bob", weight=10),
+        Package(number=2, sender="Bob", recipient="Charlie", weight=5),
+    ]
 
 
 if __name__ == "__mani__":
