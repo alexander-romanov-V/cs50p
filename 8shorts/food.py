@@ -1,7 +1,8 @@
-"""shorts 8 - Food: class variable & method"""
+"""shorts 8 - Food: class variable & class method"""
 
 
 class Food:
+    """Example of class variable & class method"""
     # class variable
     # good for actually embedding information about the class itself and
     # accessing that through the name of the class
