@@ -36,6 +36,10 @@ def test_jar_deposit():
     with pytest.raises(ValueError):
         jar.deposit(-1)
 
+    # try add cookies more than capacity of the jar
+    with pytest.raises(ValueError):
+        jar.deposit(20)
+
     # add 5 cookies
     jar.deposit(5)
     assert jar.size == 5
