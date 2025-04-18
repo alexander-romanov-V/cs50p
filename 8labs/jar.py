@@ -1,7 +1,9 @@
 """Lab 8.2 - Cookie Jar"""
 
+
 class Jar:
     """Cookie jar to store cookies"""
+
     def __init__(self, capacity=12) -> None:
         if capacity <= 0:
             raise ValueError

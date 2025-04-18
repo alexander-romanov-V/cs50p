@@ -12,6 +12,7 @@ from fpdf import FPDF
 # Symbol, and
 # ITC Zapf Dingbats
 
+
 def main():
     """Main code"""
     name = input("Name: ")
