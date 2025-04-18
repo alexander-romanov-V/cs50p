@@ -5,6 +5,13 @@
 from fpdf import FPDF
 
 
+# The 14 standard PDF fonts are
+# Courier (Regular, Oblique, Bold, Bold Oblique),
+# Helvetica (Regular, Oblique, Bold, Bold Oblique),
+# Times (Roman, Italic, Bold, Bold Italic),
+# Symbol, and
+# ITC Zapf Dingbats
+
 def main():
     """Main code"""
     name = input("Name: ")
