@@ -1,4 +1,4 @@
-"""Lecture 9.2 - Etc: global variables vs class"""
+"""Lecture 9.3 - Etc: global variables vs class"""
 
 
 class Account:
