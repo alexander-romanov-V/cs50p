@@ -14,7 +14,7 @@ students = [
 #     if student["house"] not in houses:
 #         houses.append(student["house"])
 
-# use set - all items are unique 
+# use set - all items are unique
 houses = set()
 for student in students:
     houses.add(student["house"])
