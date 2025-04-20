@@ -12,5 +12,5 @@ def meow(n: int) -> str:
 
 number: int = int(input("Number: "))
 # 'mypy meow4.py' - shows this type error (if meow() returns not a str)
-meows: str = meow(number)  
+meows: str = meow(number)
 print(meows, end="")
