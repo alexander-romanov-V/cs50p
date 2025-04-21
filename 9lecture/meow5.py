@@ -9,9 +9,9 @@ def meow(n: int) -> str:
 
     :param n: Number of times to mew
     :type n: int
-    :raise TypeError: If n is not an int
     :return: A string of n meows, one per line
     :rtype: str
+    :raise TypeError: If n is not an int
     """
     return "meow\n" * n
 
