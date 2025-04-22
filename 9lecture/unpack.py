@@ -1,4 +1,4 @@
-"""Lecture 9.9 - Etc: unpacking"""
+"""Lecture 9.10 - Etc: unpacking"""
 
 # exmpl 1:
 # first, _ = input("What's your name? ").split(" ")
