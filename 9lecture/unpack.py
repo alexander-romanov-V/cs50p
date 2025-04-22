@@ -23,7 +23,6 @@ print(total(coins[0], coins[1], coins[2]), "Knuts")
 print(total(*coins), "Knuts")
 
 
-
 # 1.1 - source code
 print(total(galleons=100, sickles=50, knuts=25), "Knuts")
 
