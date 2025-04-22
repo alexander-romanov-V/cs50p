@@ -3,8 +3,8 @@
 
 def f(*args, **kwargs):  # positions args and key words args
     """Test *args and **kwarg behaviour"""
-    print("Positional:", args)  # a sequence
-    print("Named:", kwargs)  # a dict of params
+    print("Positional:", args)  # a sequence of params
+    print("Named:", kwargs)  # a dict of named params
 
 
 def new_print(*objects, sep=" ", end="\n"):
@@ -12,7 +12,7 @@ def new_print(*objects, sep=" ", end="\n"):
 
     # can iterate over each variable number of parameters
     for obj in objects:
-        print(obj)
+        print(obj, sep=sep, end=end)
 
 
 f(100, 50, 25)
