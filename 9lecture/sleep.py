@@ -24,7 +24,7 @@ def main():
 # returns [yield] only one value at a time (by each request)
 # for loop still be working but will return value on each its iteration
 def sheep(n):
-    """Returns a row of sheeps on each iteration"""
+    """Returns a row by row of sheeps on each iteration"""
     for i in range(n):
         yield "🐑" * i
 
