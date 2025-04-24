@@ -3,12 +3,40 @@
 
 def main():
     """Main code"""
+    one_triangle()
+    gravity()
+    geometric_mean()
     pizza_circles()
     divisibility()
     aggsactly()
     name_game()
     pig_latin()
     next_letter()
+
+
+def one_triangle():
+    """One Triangle"""
+    n = int(input())
+    for i in range(n, 0, -1):
+        print("1" * i)
+
+
+def gravity():
+    """Gravity"""
+    import math
+
+    v = float(input())
+    t = (v - math.sqrt(v**2 - 4 * (-4.9) * 11000)) / (2 * (-4.9))
+    print(t)
+
+
+def geometric_mean():
+    """Geometric Mean"""
+    import math
+
+    a = float(input())
+    b = float(input())
+    print(math.sqrt(a * b))
 
 
 def pizza_circles():
