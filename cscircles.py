@@ -1,10 +1,43 @@
 """Computer Science Circles tasks"""
 
+
 def main():
     """Main code"""
+    pizza_circles()
+    divisibility()
+    aggsactly()
     name_game()
     pig_latin()
     next_letter()
+
+
+def pizza_circles():
+    """Pizza Circles"""
+    import math
+
+    r = float(input())
+    s = math.pi * r**2
+    print(s)
+
+
+def divisibility():
+    """Divisibility"""
+    a = int(input())
+    b = int(input())
+    if a % b == 0:
+        print("divisible")
+    else:
+        print("not divisible")
+
+
+def aggsactly():
+    """Eggsactly"""
+    eggs = int(input())
+    cartons = eggs // 12
+    free = eggs % 12
+    print(cartons)
+    print(free)
+
 
 def name_game():
     """The Name Game"""
@@ -14,10 +47,12 @@ def name_game():
     print(f"fee-fi-mo-m{s[1:]}")
     print(f"{s}!")
 
+
 def pig_latin():
     """Pig Latin"""
     s = input()
-    print(s[1:]+s[0]+"ay")
+    print(s[1:] + s[0] + "ay")
+
 
 def next_letter():
     """Next Letter"""
@@ -25,8 +60,9 @@ def next_letter():
     if c == "Z":
         c = "A"
     else:
-        c = chr(ord(c)+1)
+        c = chr(ord(c) + 1)
     print(c)
+
 
 if __name__ == "__mani__":
     main()
