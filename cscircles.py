@@ -3,15 +3,42 @@
 
 def main():
     """Main code"""
-    one_triangle()
-    gravity()
-    geometric_mean()
-    pizza_circles()
-    divisibility()
-    aggsactly()
-    name_game()
-    pig_latin()
-    next_letter()
+
+
+    finding_factors()
+    # square_census()
+
+    # one_triangle()
+    # gravity()
+    # geometric_mean()
+
+    # pizza_circles()
+    # divisibility()
+    # aggsactly()
+
+    # name_game()
+    # pig_latin()
+    # next_letter()
+
+
+def finding_factors():
+    """Finding Factors"""
+    n = int(input())
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            if i * j == n:
+                print(f"{i} times {j} equals {n}")
+
+
+def square_census():
+    """Square Census"""
+    import math
+
+    n = int(input())
+    i = 1
+    while i**2 < n:
+        print(i**2)
+        i += 1
 
 
 def one_triangle():
@@ -92,5 +119,5 @@ def next_letter():
     print(c)
 
 
-if __name__ == "__mani__":
+if __name__ == "__main__":
     main()
