@@ -7,9 +7,13 @@
 def main():
     """Main code"""
 
-    watch_the_pendulum()
-    substring_counting()
-    python_adder()
+    character_map()
+    ending_time()
+    centering_text()
+
+    # watch_the_pendulum()
+    # substring_counting()
+    # python_adder()
 
     # finding_factors()
     # square_census()
@@ -25,6 +29,63 @@ def main():
     # name_game()
     # pig_latin()
     # next_letter()
+
+
+def character_map():
+    """Character Map"""
+    n = 32  # start number
+    for r in range(6):
+        nn = n + r * 16
+        print("chr:", end="")
+        for i in range(16):
+            print(f"{chr(nn+i):>3}", end=" ")
+        print("\nasc:", end="")
+        for i in range(16):
+            print(f" {(nn+i):^3}", end="")
+        print()
+
+
+def ending_time():
+    """Ending Time"""
+    h, m = input().strip().split(":")
+    d = int(input())
+    h, m = int(h), int(m)
+    h = (h + (m + d) // 60) % 24
+    m = (m + d) % 60
+    print(f"{h:02}:{m:02}")
+
+
+def centering_text():
+    """Centering Text"""
+    # Option 1
+    # width = int(input())
+    # lines = []
+    # while (line := input()) != "END":
+    #     lines.append(line.center(width, "."))
+    # print(*lines, sep="\n")
+    #
+    # Option 2
+    # width = int(input())
+    # lines = []
+    # while True:
+    #     line = input()
+    #     if line == "END":
+    #         break
+    #     lines.append(line)
+    # for line in lines:
+    #     print(line.center(width, "."))
+    #
+    # Option 3 (left dots must be gerater of rights if not equals)
+    width = int(input())
+    lines = []
+    while True:
+        line = input()
+        if line == "END":
+            break
+        lenght = len(line)
+        half = (width - lenght) // 2
+        lines.append("." * (width - lenght - half) + line + "." * half)
+    print(*lines, sep="\n")
 
 
 def watch_the_pendulum():
