@@ -1,11 +1,17 @@
 """Computer Science Circles tasks"""
 
+# https://cscircles.cemc.uwaterloo.ca/
+# Each func it is actually separate task (that why repeated imports)
+
 
 def main():
     """Main code"""
 
+    watch_the_pendulum()
+    substring_counting()
+    python_adder()
 
-    finding_factors()
+    # finding_factors()
     # square_census()
 
     # one_triangle()
@@ -19,6 +25,49 @@ def main():
     # name_game()
     # pig_latin()
     # next_letter()
+
+
+def watch_the_pendulum():
+    """Watch the Pendulum"""
+    import math
+
+    L = float(input())
+    A = float(input())
+    for T in range(10):
+        print(L * math.cos(A * math.cos(T * math.sqrt(9.8 / L))) - L * math.cos(A))
+
+
+def substring_counting():
+    """Substring Counting"""
+    # needle = input()  # "an"
+    # haystack = input()  # "trans-Panamanian banana"
+    needle = "sses"
+    haystack = "assesses"
+    # OVERLAPPING count: sum 1 if startswith
+    print(
+        sum(
+            1
+            for i in range(len(haystack) - len(needle) + 1)
+            if haystack.startswith(needle, i)
+        )
+    )
+    # OVERLAPPING count: sum of [True, False, ..., True] -> int(True) == 1
+    # print(
+    #     sum(
+    #         [
+    #             haystack.startswith(needle, i)
+    #             for i in range(len(haystack) - len(needle) + 1)
+    #         ]
+    #     )
+    # )
+    # print(haystack.count(needle)) # NON-overlapping
+
+
+def python_adder():
+    """Python Adder"""
+    S = input()
+    a, b = S.split("+")
+    print(int(a) + int(b))
 
 
 def finding_factors():
