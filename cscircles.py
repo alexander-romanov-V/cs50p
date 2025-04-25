@@ -7,9 +7,13 @@
 def main():
     """Main code"""
 
-    character_map()
-    ending_time()
-    centering_text()
+    letters()
+    first_second_third()
+    absolute_value()
+
+    # character_map()
+    # ending_time()
+    # centering_text()
 
     # watch_the_pendulum()
     # substring_counting()
@@ -29,6 +33,35 @@ def main():
     # name_game()
     # pig_latin()
     # next_letter()
+
+
+def letters():
+    """26 Letters"""
+    letter = input()
+    if "A" <= letter <= "Z":
+        print(ord(letter) - ord("A") + 1)
+    else:
+        print("invalid")
+
+
+def first_second_third():
+    """First, Second, Third"""
+    n = int(input())
+    if n == 1:
+        e = "st"
+    elif n == 2:
+        e = "nd"
+    elif n == 3:
+        e = "rd"
+    else:
+        e = "th"
+    print(f"{n}{e}")
+
+
+def absolute_value():
+    """Absolute Value"""
+    x = int(input())
+    print(max(-x, x))
 
 
 def character_map():
