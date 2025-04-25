@@ -41,12 +41,14 @@ def lower_char(char):
     """Convert char to lowercase"""
     return chr(ord(char) - ord("A") + ord("a")) if "A" <= char <= "Z" else char
 
+
 def lower_string(string):
     """Convert string to lowercase"""
     result = ""
     for c in string:
         result += lower_char(c)
     return result
+
 
 def letters():
     """26 Letters"""
