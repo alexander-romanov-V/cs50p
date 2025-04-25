@@ -1,15 +1,17 @@
 """Computer Science Circles tasks"""
 
 # https://cscircles.cemc.uwaterloo.ca/
-# Each func it is actually separate task (that why repeated imports)
+# Each func it is actually separate task (that's why repeated imports)
 
 
 def main():
     """Main code"""
 
-    letters()
-    first_second_third()
-    absolute_value()
+    print(lower_string("TEST string"))
+
+    # letters()
+    # first_second_third()
+    # absolute_value()
 
     # character_map()
     # ending_time()
@@ -34,6 +36,17 @@ def main():
     # pig_latin()
     # next_letter()
 
+
+def lower_char(char):
+    """Convert char to lowercase"""
+    return chr(ord(char) - ord("A") + ord("a")) if "A" <= char <= "Z" else char
+
+def lower_string(string):
+    """Convert string to lowercase"""
+    result = ""
+    for c in string:
+        result += lower_char(c)
+    return result
 
 def letters():
     """26 Letters"""
