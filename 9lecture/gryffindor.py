@@ -8,6 +8,7 @@ students = [
     {"name": "Padma", "house": "Ravenclaw"},
 ]
 
+
 # pythonic way 1 - create new LIST with conditional
 #
 gryffindors = [
