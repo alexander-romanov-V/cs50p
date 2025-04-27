@@ -11,7 +11,7 @@ def yell(*words):
     uppercased = []
     for word in words:
         uppercased.append(word.upper())
-    print(*uppercased) # unpack the list
+    print(*uppercased)  # unpack the list
 
 
 if __name__ == "__main__":

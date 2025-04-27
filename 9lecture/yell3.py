@@ -12,7 +12,7 @@ def yell(*words):
     # uppercased = map(str.upper, words)
     # alternative (pythonuc) way apply upper for each elements in list
     uppercased = [word.upper() for word in words]
-    print(*uppercased) # unpack the list
+    print(*uppercased)  # unpack the list
 
 
 if __name__ == "__main__":
