@@ -41,7 +41,31 @@ def main():
     # print("Distance between (10, 15) and (13, 11):", distance_2d(10, 15, 13, 11))
     # print("Perimeter any triangle (5, 1) (7, 10) (4, 3):", f"{triangle_perimeter(5, 1, 7, 10, 4, 3):.2f}")
 
-    lucky_sevens()
+    # lucky_sevens()
+    # print(middle([8, 0, 100, 12, 1]))
+    # print(natural_numbers(5))
+    print(is_palindrome("racecar"))
+
+
+def is_palindrome(S):
+    """Palindrome"""
+    for i in range(len(S) // 2):
+        if S[i] != S[-(i + 1)]:
+            return False
+    return True
+
+
+def natural_numbers(n):
+    """It's Natural"""
+    res = [0] * n
+    for i in range(n):
+        res[i] = i + 1
+    return res
+
+
+def middle(L):
+    """Monkey in the Middle"""
+    return L[len(L) // 2]
 
 
 def lucky_sevens():
