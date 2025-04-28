@@ -45,7 +45,29 @@ def main():
     # print(middle([8, 0, 100, 12, 1]))
     # print(natural_numbers(5))
     # print(is_palindrome("racecar"))
-    print(prod([2, 3, 4]))
+    # print(prod([2, 3, 4]))
+    # print(replace([3, 1, 4, 1, 5, 9], 1, 7))
+    print(postalValidate("d4s0s2 "))
+
+
+def postalValidate(S):
+    """Exact Postage"""
+    S = S.replace(" ", "").upper()
+    if len(S) != 6:
+        return False
+    for i in range(3):
+        if not S[i * 2].isalpha() or not S[i * 2 + 1].isdigit():
+            return False
+    return S
+
+
+def replace(list, X, Y):
+    """The Replacements"""
+    for _ in range(list.count(X)):
+        i = list.index(X)
+        list.pop(i)
+        list.insert(i, Y)
+    return list
 
 
 def prod(L):
