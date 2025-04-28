@@ -44,7 +44,16 @@ def main():
     # lucky_sevens()
     # print(middle([8, 0, 100, 12, 1]))
     # print(natural_numbers(5))
-    print(is_palindrome("racecar"))
+    # print(is_palindrome("racecar"))
+    print(prod([2, 3, 4]))
+
+
+def prod(L):
+    """Product"""
+    res = 1
+    for i in L:
+        res *= i
+    return res
 
 
 def is_palindrome(S):
