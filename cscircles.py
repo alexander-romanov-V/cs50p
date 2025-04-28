@@ -7,34 +7,65 @@
 def main():
     """Main code"""
 
-    print(lower_string("TEST string"))
-
-    # letters()
-    # first_second_third()
-    # absolute_value()
-
-    # character_map()
-    # ending_time()
-    # centering_text()
-
-    # watch_the_pendulum()
-    # substring_counting()
-    # python_adder()
-
-    # finding_factors()
-    # square_census()
-
-    # one_triangle()
-    # gravity()
-    # geometric_mean()
-
-    # pizza_circles()
-    # divisibility()
-    # aggsactly()
-
-    # name_game()
-    # pig_latin()
     # next_letter()
+    # pig_latin()
+    # name_game()
+
+    # aggsactly()
+    # divisibility()
+    # pizza_circles()
+
+    # geometric_mean()
+    # gravity()
+    # one_triangle()
+
+    # square_census()
+    # finding_factors()
+
+    # python_adder()
+    # substring_counting()
+    # watch_the_pendulum()
+
+    # centering_text()
+    # ending_time()
+    # character_map()
+
+    # absolute_value()
+    # first_second_third()
+    # letters()
+
+    # print(lower_string("TEST string"))
+
+    print("Hypotenuse (a=3, b=4):", hypotenuse(3, 4))
+    print("Perimeter right triangle (a=3, b=4):", rightTrianglePerimeter(3, 4))
+    print("Distance between (10, 15) and (13, 11):", distance2D(10, 15, 13, 11))
+    print("Perimeter any triangle (5, 1) (7, 10) (4, 3):", f"{trianglePerimeter(5, 1, 7, 10, 4, 3):.2f}")
+
+
+def hypotenuse(a, b):
+    """Compute the length of a right triangle's hypotenuse"""
+    import math
+
+    return math.sqrt(a**2 + b**2)
+
+
+def rightTrianglePerimeter(a, b):
+    """Compute the perimeter of a right triangle"""
+    return a + b + hypotenuse(a, b)
+
+
+def distance2D(x1, y1, x2, y2):
+    """Compute the distance between two points in 2D"""
+    return hypotenuse(abs(x2 - x1), abs(y2 - y1))
+
+
+def trianglePerimeter(xA, yA, xB, yB, xC, yC):
+    """Compute the perimeter of an arbitrary triangle"""
+    return (
+        distance2D(xA, yA, xB, yB)
+        + distance2D(xB, yB, xC, yC)
+        + distance2D(xA, yA, xC, yC)
+    )
 
 
 def lower_char(char):
