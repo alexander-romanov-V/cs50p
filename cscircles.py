@@ -54,21 +54,34 @@ def main():
     # print(execute(["5 GOTO 30", "10 GOTO 20", "20 GOTO 10", "30 GOTO 40", "40 END"]))
 
     # temperature_converter()
-    print(check("9384 3495 3297 0123"))
-    print(check("9384 3495 3297 0121"))
+    # print(check("9384 3495 3297 0123"))
+    # print(check("9384 3495 3297 0121"))
+
+    poetic_analysis()
+
+
+def poetic_analysis():
+    """Poetic Analysis"""
+    lines = ""
+    while (line := input()) != "###":
+        lines += " " + line
+    words = {}
+    for line in lines.lower().split():
+        words[line] = 1 + words.get(line, 0)
+    print(max(words, key=lambda w: words[w]))
+
 
 def check(S):
     """Credit Check"""
 
     import re
-    match = re.search(r"^(\d{4} ){3}\d{4}$", S)
-    if not match:
+
+    if not re.search(r"^(\d{4} ){3}\d{4}$", S):
         return False
-    S = S.replace(" ", "")
-    s = sum(int(c) for c in S)
-    if s % 10 > 0:
+    if sum(int(c) for c in S if "0" <= c <= "9") % 10 > 0:
         return False
     return True
+
 
 def temperature_converter():
     """Forty Below In The Winter"""
