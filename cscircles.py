@@ -47,10 +47,21 @@ def main():
     # print(is_palindrome("racecar"))
     # print(prod([2, 3, 4]))
     # print(replace([3, 1, 4, 1, 5, 9], 1, 7))
-    print(postalValidate("d4s0s2 "))
+    # print(postalValidate("d4s0s2 "))
 
 
-def postalValidate(S):
+def getBASIC():
+    """BASIC: Reading the Program"""
+    res = []
+    while True:
+        try:
+            line = input()
+            res.append(line)
+        except EOFError:
+            return res
+
+
+def postal_validate(S):
     """Exact Postage"""
     S = S.replace(" ", "").upper()
     if len(S) != 6:
