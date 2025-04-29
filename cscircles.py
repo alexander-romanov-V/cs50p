@@ -49,7 +49,9 @@ def main():
     # print(replace([3, 1, 4, 1, 5, 9], 1, 7))
     # print(postalValidate("d4s0s2 "))
 
-    print(findLine(["10 GOTO 20", "20 END"], "10"))
+    # print(find_line(["10 GOTO 20", "20 END"], "10"))
+    print(execute(["10 GOTO 21", "21 GOTO 37", "37 GOTO 21", "40 END"]))
+    print(execute(["5 GOTO 30", "10 GOTO 20", "20 GOTO 10", "30 GOTO 40", "40 END"]))
 
 
 def getBASIC():
@@ -69,6 +71,22 @@ def find_line(prog, target):
         if line.startswith(target):
             return i
     return 0
+
+
+def execute(prog):
+    """Smart Simulation"""
+    location = 0
+    visited = [False] * len(prog)
+    while not visited[location]:
+        visited[location] = True
+        cmd = prog[location].split()
+        if cmd[1] == "END":
+            return "success"
+        if len(cmd) == 3 and cmd[1].upper() == "GOTO":
+            location = find_line(prog, cmd[2])
+        else:
+            location += 1
+    return "infinite loop"
 
 
 def postal_validate(S):
