@@ -58,6 +58,20 @@ def main():
     # print(check("9384 3495 3297 0121"))
 
     poetic_analysis()
+    print(choose(8, 5))
+
+
+def choose(n, k):
+    """Be Choosy"""
+    # from math import factorial
+    # return factorial(n) // (factorial(k) * factorial(n - k))
+    numerator = 1
+    for i in range(n, n - k, -1):
+        numerator *= i
+    denominator = 1
+    for i in range(k, 1, -1):
+        denominator *= i
+    return numerator // denominator
 
 
 def poetic_analysis():
