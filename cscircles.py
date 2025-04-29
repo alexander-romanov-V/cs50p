@@ -60,7 +60,25 @@ def main():
     # poetic_analysis()
     # print(choose(8, 5))
     # print(shift_code("SPY CODER", 5))
-    print(shift_decode("HUD", 6))
+    # print(shift_decode("HUD", 6))
+    print(auto_decode("IQQF"))
+
+
+def auto_decode(s):
+    """Auto-Decryption"""
+    letterGoodness = [
+        0.0817, 0.0149, 0.0278, 0.0425, 0.1270, 0.0223,
+        0.0202, 0.0609, 0.0697, 0.0015, 0.0077, 0.0402, 0.0241,
+        0.0675, 0.0751, 0.0193, 0.0009, 0.0599, 0.0633,
+        0.0906, 0.0276, 0.0098, 0.0236, 0.0015, 0.0197, 0.0007,
+    ]
+    def goodness(s):
+        r = 1
+        for c in s:
+            r *= letterGoodness[(ord(c) - ord('A'))] if "A" <= c <= "Z" else 1
+        return r
+    goodnesses = [goodness(shift_decode(s, i)) for i in range(26)]
+    return shift_decode(s, goodnesses.index(max(goodnesses)))
 
 
 def shift_decode(s, n):
