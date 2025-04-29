@@ -49,6 +49,8 @@ def main():
     # print(replace([3, 1, 4, 1, 5, 9], 1, 7))
     # print(postalValidate("d4s0s2 "))
 
+    print(findLine(["10 GOTO 20", "20 END"], "10"))
+
 
 def getBASIC():
     """BASIC: Reading the Program"""
@@ -59,6 +61,14 @@ def getBASIC():
             res.append(line)
         except EOFError:
             return res
+
+
+def find_line(prog, target):
+    """BASIC: Go to it!"""
+    for i, line in enumerate(prog):
+        if line.startswith(target):
+            return i
+    return 0
 
 
 def postal_validate(S):
