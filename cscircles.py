@@ -59,7 +59,16 @@ def main():
 
     # poetic_analysis()
     # print(choose(8, 5))
-    print(shift_code("SPY CODER", 5))
+    # print(shift_code("SPY CODER", 5))
+    print(shift_decode("HUD", 6))
+
+
+def shift_decode(s, n):
+    """Spy Decoder"""
+    r = ""
+    for c in s.upper():
+        r += chr((ord(c) - ord("A") + 26 - n) % 26 + ord("A")) if "A" <= c <= "Z" else c
+    return r
 
 
 def shift_code(s, n):
