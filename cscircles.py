@@ -50,11 +50,28 @@ def main():
     # print(postalValidate("d4s0s2 "))
 
     # print(find_line(["10 GOTO 20", "20 END"], "10"))
-    print(execute(["10 GOTO 21", "21 GOTO 37", "37 GOTO 21", "40 END"]))
-    print(execute(["5 GOTO 30", "10 GOTO 20", "20 GOTO 10", "30 GOTO 40", "40 END"]))
+    # print(execute(["10 GOTO 21", "21 GOTO 37", "37 GOTO 21", "40 END"]))
+    # print(execute(["5 GOTO 30", "10 GOTO 20", "20 GOTO 10", "30 GOTO 40", "40 END"]))
+
+    temperature_converter()
 
 
-def getBASIC():
+def temperature_converter():
+    """Forty Below In The Winter"""
+    s = input().strip()
+    t = float(s[:-1])
+    cf = s[-1:].upper()
+    if cf == "C":
+        t = round(t * 9 / 5 + 32, 3)
+        print(f"{t}F")
+    elif cf == "F":
+        t = round((t - 32) * 5 / 9, 3)
+        print(f"{t}C")
+    else:
+        print("error")
+
+
+def get_basic():
     """BASIC: Reading the Program"""
     res = []
     while True:
