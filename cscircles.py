@@ -57,8 +57,17 @@ def main():
     # print(check("9384 3495 3297 0123"))
     # print(check("9384 3495 3297 0121"))
 
-    poetic_analysis()
-    print(choose(8, 5))
+    # poetic_analysis()
+    # print(choose(8, 5))
+    print(shift_code("SPY CODER", 5))
+
+
+def shift_code(s, n):
+    """Spy Coder"""
+    r = ""
+    for c in s.upper():
+        r += chr((ord(c) - ord("A") + n) % 26 + ord("A")) if "A" <= c <= "Z" else c
+    return r
 
 
 def choose(n, k):
