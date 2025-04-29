@@ -53,8 +53,22 @@ def main():
     # print(execute(["10 GOTO 21", "21 GOTO 37", "37 GOTO 21", "40 END"]))
     # print(execute(["5 GOTO 30", "10 GOTO 20", "20 GOTO 10", "30 GOTO 40", "40 END"]))
 
-    temperature_converter()
+    # temperature_converter()
+    print(check("9384 3495 3297 0123"))
+    print(check("9384 3495 3297 0121"))
 
+def check(S):
+    """Credit Check"""
+
+    import re
+    match = re.search(r"^(\d{4} ){3}\d{4}$", S)
+    if not match:
+        return False
+    S = S.replace(" ", "")
+    s = sum(int(c) for c in S)
+    if s % 10 > 0:
+        return False
+    return True
 
 def temperature_converter():
     """Forty Below In The Winter"""
