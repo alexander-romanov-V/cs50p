@@ -65,7 +65,19 @@ def main():
 
     # print(digital_sum(2019))
     # print(digital_root(2019))
-    hailstone(5)
+    # hailstone(5)
+    print(nested_list_contains([1, [2, [3], 4]], 3))
+    print(nested_list_contains([1, [2, [3], 4]], 5))
+
+
+def nested_list_contains(NL, target):
+    """Searching a Nested List"""
+    if not isinstance(NL, list):
+        return NL == target
+    for l in NL:
+        if nested_list_contains(l, target):
+            return True
+    return False
 
 
 def hailstone(n):
