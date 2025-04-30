@@ -63,8 +63,17 @@ def main():
     # print(shift_decode("HUD", 6))
     # print(auto_decode("IQQF"))
 
-    print(digital_sum(2019))
-    print(digital_root(2019))
+    # print(digital_sum(2019))
+    # print(digital_root(2019))
+    hailstone(5)
+
+
+def hailstone(n):
+    """Hailstone"""
+    print(n)
+    if n > 1:
+        hailstone(n // 2 if n % 2 == 0 else 3 * n + 1)
+    return
 
 
 def digital_sum(n):
