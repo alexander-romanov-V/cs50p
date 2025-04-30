@@ -66,8 +66,19 @@ def main():
     # print(digital_sum(2019))
     # print(digital_root(2019))
     # hailstone(5)
-    print(nested_list_contains([1, [2, [3], 4]], 3))
-    print(nested_list_contains([1, [2, [3], 4]], 5))
+    # print(nested_list_contains([1, [2, [3], 4]], 3))
+    # print(nested_list_contains([1, [2, [3], 4]], 5))
+    sieve_of_eratosthenes(30)
+
+
+def sieve_of_eratosthenes(n=1000001):
+    """Primed for Takeoff"""
+    isPrime = [False, False] + [True] * (n - 1)
+    for i in range(2, n + 1):
+        if isPrime[i]:
+            for j in range(i * i, n + 1, i):
+                isPrime[j] = False
+    print([i for i, x in enumerate(isPrime) if x])
 
 
 def nested_list_contains(NL, target):
