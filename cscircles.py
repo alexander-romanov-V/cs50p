@@ -59,6 +59,7 @@ def main():
 
     # poetic_analysis()
     # print(choose(8, 5))
+    
     # print(shift_code("SPY CODER", 5))
     # print(shift_decode("HUD", 6))
     # print(auto_decode("IQQF"))
@@ -66,7 +67,7 @@ def main():
     # print(digital_sum(2019))
     # print(digital_root(2019))
     # hailstone(5)
-    
+
     # print(nested_list_contains([1, [2, [3], 4]], 3))
     # print(nested_list_contains([1, [2, [3], 4]], 5))
     
