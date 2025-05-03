@@ -44,6 +44,7 @@ def main():
     # lucky_sevens()
     # print(middle([8, 0, 100, 12, 1]))
     # print(natural_numbers(5))
+    
     # print(is_palindrome("racecar"))
     # print(prod([2, 3, 4]))
     # print(replace([3, 1, 4, 1, 5, 9], 1, 7))
@@ -59,7 +60,7 @@ def main():
 
     # poetic_analysis()
     # print(choose(8, 5))
-    
+
     # print(shift_code("SPY CODER", 5))
     # print(shift_decode("HUD", 6))
     # print(auto_decode("IQQF"))
