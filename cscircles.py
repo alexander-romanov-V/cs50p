@@ -38,6 +38,7 @@ def main():
 
     # print("Hypotenuse (a=3, b=4):", hypotenuse(3, 4))
     # print("Perimeter right triangle (a=3, b=4):", right_triangle_perimeter(3, 4))
+    
     # print("Distance between (10, 15) and (13, 11):", distance_2d(10, 15, 13, 11))
     # print("Perimeter any triangle (5, 1) (7, 10) (4, 3):", f"{triangle_perimeter(5, 1, 7, 10, 4, 3):.2f}")
 
